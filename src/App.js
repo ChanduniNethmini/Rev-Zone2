@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Card from "./components/Landing/Card";
 import CardList from "./components/Landing/CardList";
 
+
 function App() {
   return (
     <div>
