@@ -8,6 +8,7 @@ import LandingMain from "./components/Landing/LandingMain";
 import Item from "./components/Products/Item";
 import Cart from "./components/Products/Cart";
 import CartProvider from "./context/CartProvider";
+import OrderForm from "./components/Order/OrderForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<LandingMain />} />
         <Route path="/items" element={<Item />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/order" element={<OrderForm />} />
       </Routes>
       <Footer />
     </CartProvider>
