@@ -9,19 +9,16 @@ import Item from "./components/Products/Item";
 import Cart from "./components/Products/Cart";
 import CartProvider from "./context/CartProvider";
 
-
 function App() {
   return (
     <CartProvider>
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<LandingMain />} />
-          <Route path="/items" element={<Item />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<LandingMain />} />
+        <Route path="/items" element={<Item />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
     </CartProvider>
   );
 }
