@@ -1,3 +1,6 @@
+
+
+
 .App {
   text-align: center;
 }
@@ -6,12 +9,50 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    flex-grow: 1;
+    justify-content: center;
   }
 }
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+  }
+
+  .navbar-collapse .nav-link,
+  .navbar-collapse .dropdown-item {
+    color: #ffffff !important;
+    font-weight: 600;
+
+  }
+.navbar-collapse .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+}
+  .navbar-collapse .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9); /* dark background */
+    border: none;
+  }
+
+  .navbar .d-flex.gap-3 {
+    margin-right: 0.5rem;
+  }
+
+  .main-navbar .d-flex.gap-3 {
+    padding-right: 1rem;
+  }
+
+    .navbar .navbar-toggler {
+    margin-left: 1rem;
+  }
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +76,89 @@
   to {
     transform: rotate(360deg);
   }
+
+  
+}
+
+/* Ensure the dropdown shows on hover */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Optional: Add a smooth transition effect */
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-weight: 600 !important;
+
+}
+
+.nav-link.active {
+  color: #2196F3 !important; /* Or your desired active color */
+  font-weight: bold;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #2196F3;
+}
+
+.main-navbar {
+  background-color: rgba(0, 0, 0, 0.02); /* transparent black */
+  transition: background-color 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+  color: white;
+}
+
+.main-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.main-navbar .nav-link {
+  color: #ffffff !important;
+}
+
+
+
+body {
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+.main-navbar .nav-link {
+  color: white !important;
+}
+
+/* Optional: Highlight active link */
+.main-navbar .nav-link.active {
+  color: #2196F3 !important;
+  font-weight: bold;
+  border-bottom: 2px solid #2196F3;
+}
+
+/* //////////////slider////////////////// */
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  /* Do NOT change position unless necessary */
 }
