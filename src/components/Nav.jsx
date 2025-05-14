@@ -63,7 +63,7 @@ const Nav = () => {
             <BootstrapNav.Link as={NavLink} to="/" end className="mx-lg-2">
               Home
             </BootstrapNav.Link>
-            <BootstrapNav.Link as={NavLink} to="/shop" className="mx-lg-2">
+            <BootstrapNav.Link as={NavLink} to="/items" className="mx-lg-2">
               Shop
             </BootstrapNav.Link>
 

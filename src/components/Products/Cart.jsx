@@ -59,7 +59,7 @@ const Cart = () => {
                         <button className="btn btn-danger m-2"
                             onClick={() => emptyCart()}>Clear Cart</button>
                         <br />
-                        <button className="btn btn-primary m-2"><a href="/order/add" style={{ textDecoration: 'none', color: 'white' }}>Proceed to Checkout</a></button>
+                        <button className="btn btn-primary m-2"><a href="/order" style={{ textDecoration: 'none', color: 'white' }}>Proceed to Checkout</a></button>
                     </div>
                 </div>
             </section>
