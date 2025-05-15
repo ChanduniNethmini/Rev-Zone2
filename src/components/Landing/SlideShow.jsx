@@ -16,7 +16,7 @@ export default function SlideShow() {
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -37,7 +37,7 @@ export default function SlideShow() {
           <div className="carousel-item active">
             <div className="carousel-overlay"></div> {/* Overlay */}
             <img src={spare} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption ">
               <div>
                 <span>Unleash True Power</span>
               </div>
@@ -56,7 +56,7 @@ export default function SlideShow() {
           <div className="carousel-item">
             <div className="carousel-overlay"></div> {/* Overlay */}
             <img src={second} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption ">
               <div>
                 <span>Style Meets Function</span>
               </div>
@@ -75,7 +75,7 @@ export default function SlideShow() {
           <div className="carousel-item">
             <div className="carousel-overlay"></div> {/* Overlay */}
             <img src={third} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption ">
               <div>
                 <span>Keep It Running Smooth</span>
               </div>
