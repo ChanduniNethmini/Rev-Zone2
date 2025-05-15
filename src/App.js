@@ -1,20 +1,28 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Nav from "./components/Nav";
-import SlideShow from "./components/Landing/SlideShow";
 import Footer from "./components/Footer";
-import Card from "./components/Landing/Card";
-import CardList from "./components/Landing/CardList";
+import LandingMain from "./components/Landing/LandingMain";
+import Item from "./components/Products/Item";
+import Cart from "./components/Products/Cart";
+import CartProvider from "./context/CartProvider";
 
 
 function App() {
   return (
-    <div>
-      <Nav />
-      <SlideShow />
-      <CardList />
-      <Footer />
-    </div>
+    <CartProvider>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<LandingMain />} />
+          <Route path="/items" element={<Item />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 }
 
