@@ -26,18 +26,18 @@ const Nav = () => {
       fixed="top"
       className={`main-navbar px-4 py-3 ${scrolled ? "scrolled" : ""}`}
     >
-      <Container fluid>
-        {/* Logo */}
-        <Navbar.Brand href="#" className="me-auto">
-          <img
-            src={logo}
-            height="50"
-            className="d-inline-block align-top"
-            alt="Rev Zone Logo"
-          />
-        </Navbar.Brand>
+      <Container fluid className="d-flex align-items-center justify-content-between flex-nowrap">
+        {/* Logo (responsive) */}
+        <Navbar.Brand href="#" className="me-2">
+  <img
+    src={logo}
+    alt="Rev Zone Logo"
+    className="img-fluid"
+    style={{ maxHeight: "40px", width: "auto" }}
+  />
+</Navbar.Brand>
 
-        {/* Icons (always visible, on far right) */}
+        {/* Icons (always visible on far right) */}
         <div className="d-flex align-items-center gap-3 order-lg-2 text-white">
           <BiSearch size={20} />
           <div className="position-relative">
@@ -54,7 +54,7 @@ const Nav = () => {
           </div>
         </div>
 
-        {/* Toggle (mobile menu) */}
+        {/* Toggle (hamburger) */}
         <Navbar.Toggle aria-controls="navbar-nav" className="ms-2 order-lg-3" />
 
         {/* NavLinks */}
@@ -109,6 +109,10 @@ const Nav = () => {
           </BootstrapNav>
         </Navbar.Collapse>
       </Container>
+
+
+
+      
     </Navbar>
   );
 };

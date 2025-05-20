@@ -39,6 +39,21 @@
   .carousel-caption {
     top: 60% !important;
   }
+   .navbar-brand img {
+    max-height: 30px;
+  }
+}
+
+
+.navbar-brand img {
+  height: auto;
+  max-height: 40px;
+  width: auto;
+}
+
+.navbar .container,
+.navbar .d-flex {
+  flex-wrap: nowrap !important;
 }
 
 .navbar-collapse .nav-link,
